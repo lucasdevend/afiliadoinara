@@ -1,0 +1,266 @@
+/* -----------------------
+    RESET + BASE SIMPLES
+------------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+:root {
+    --rosa: #904f9a;
+    --rosa-claro: #ffd1e6;
+    --fundo: #7f609c;
+    --card: #c87ad4;
+    --texto: #ffffff;
+    --texto-suave: #cfc9dc;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--fundo);
+    color: var(--texto);
+}
+
+/* --------
+    HEADER
+ --------- */
+header {
+    text-align: center;
+    padding: 32px 16px 20px;
+}
+
+header::before {
+    content: "";
+    display: block;
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 14px;
+    border-radius: 50%;
+    background: url("imgs/WhatsApp\ Image\ 2026-01-08\ at\ 19.12.23.jpeg") center / cover no-repeat;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+header p {
+    margin-top: 4px;
+    font-size: 0.9rem;
+    color: var(--texto-suave);
+}
+
+/* ----------
+    CONTAINER
+--------------*/
+.container {
+    max-width: 420px;
+    margin: 0 auto;
+    padding: 12px 14px 24px;
+}
+
+/* ------------------------
+    CARDS (LINK-IN-BIO REAL)
+  --------------------------- */
+.produtos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card {
+    background: var(--card);
+    border-radius: 12px;
+    padding: 10px 12px;
+}
+
+/* REMOVE QUALQUER ESTADO VISUAL */
+.card,
+.card:hover,
+.card:active,
+.card:focus,
+.card:focus-within {
+    outline: none;
+    box-shadow: none;
+    transform: none;
+}
+
+/* -------------- 
+    LINK / CARD
+----------------- */
+.card a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--texto);
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* IMAGEM PEQUENA DO PRODUTO */
+.card img {
+    width: 50px;
+    height: 40px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* TEXTO DO CARD */
+.card div {
+    display: flex;
+    flex-direction: column;
+}
+
+.card span {
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+/* Novo: preço e frases persuasivas */
+.card p {
+    font-size: 0.85rem;
+    color: var(--texto-suave);
+    margin-top: 2px;
+}
+
+.card small {
+    font-size: 0.75rem;
+    color: #f7e600; /* destaque sutil para persuasão */
+    margin-top: 2px;
+}
+
+/* FEEDBACK DE TOQUE SUAVE */
+.card a:active {
+    opacity: 0.85;
+}
+
+/* ------------ 
+    NEVE anim
+---------------- */
+.neve {
+    position: fixed;
+    top: -10px;
+    width: 6px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: cairNeve linear forwards;
+    z-index: 0;
+}
+
+@keyframes cairNeve {
+    to {
+        transform: translateY(110vh);
+        opacity: 0.2;
+    }
+}
+
+/* ---------------------
+    ANIMAÇÃO DOS BOTÕES
+-----------------------*/
+.card a {
+    transition:
+        transform 0.15s ease,
+        opacity 0.15s ease;
+}
+
+/* mouse */
+.card a:hover {
+    transform: translateX(6px);
+}
+
+/* toque */
+.card a:active {
+    transform: scale(0.95);
+    opacity: 0.85;
+}
+
+/* ----------------
+    FOOTER
+----------------- */
+.footer {
+    color: #ccc; /* texto suave */
+    padding: 15px 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 14px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Novo: desenvolvedor */
+.footer .developer {
+    font-size: 12px;
+    color: #888;
+}
+
+.socials {
+    display: flex;
+    gap: 15px;
+}
+
+.socials a img {
+    width: 20px;
+    height: 20px;
+    filter: grayscale(100%);
+    transition: filter 0.3s, transform 0.3s;
+}
+
+.socials a:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.2);
+}
+
+/* ---------- */
+
+
+.titulo-secao {
+    margin: 24px 0 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--texto);
+}
+
+/* =========================
+    CARDS DE REDES SOCIAIS
+========================= */
+
+/* Estilo do rótulo "Redes" */
+.card span {
+    display: inline-block;
+    padding: 4px 10px;
+    margin-bottom: 6px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #904f9a, #c77dd6);
+    color: #fff;
+}
+
+/* Ajustes sutis para descrição */
+.card p {
+    font-size: 0.78rem;
+    line-height: 1.4;
+}
+
+.card {
+    margin-top: 9px;
+}
+
+.card img {
+    width: 40px;
+}
