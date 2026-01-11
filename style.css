@@ -38,7 +38,7 @@ header::before {
     height: 96px;
     margin: 0 auto 14px;
     border-radius: 50%;
-    background: url("imgs/WhatsApp\ Image\ 2026-01-08\ at\ 19.12.23.jpeg") center / cover no-repeat;
+    background: url("imgs/ChatGPT\ Image\ 10\ de\ jan.\ de\ 2026\,\ 20_52_59.png") center / cover no-repeat;
 }
 
 header h1 {
@@ -237,7 +237,7 @@ header p {
     CARDS DE REDES SOCIAIS
 ========================= */
 
-/* Estilo do rótulo "Redes" */
+/* Estilo do rótulo*/
 .card span {
     display: inline-block;
     padding: 4px 10px;
