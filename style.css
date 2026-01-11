@@ -264,3 +264,56 @@ header p {
 .card img {
     width: 40px;
 }
+
+
+
+/* =========================
+    CUPOM (BADGE COMPACTO)
+========================= */
+
+.cupom {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 1px 8px;          /* parte branca mínima */
+
+    font-size: 0.55rem;
+    font-weight: 600;
+    line-height: 1;
+
+    background: #f5e9ff;
+    color: #904f9a;
+
+    border: 1px dashed #904f9a;
+    border-radius: 3px;
+
+    white-space: nowrap;
+}
+
+.cupom span {
+    margin-left: 4px;
+    padding: 0 8px;
+
+    font-weight: 700;
+    letter-spacing: 0.5px;
+
+    background: #904f9a;
+    color: #fff;
+
+    border-radius: 2px;
+}
+
+
+.cupom {
+    margin: auto;
+}
+
+.cupom h3 {
+    padding-top: 2px;
+    padding-bottom: -5vh;
+}
+
+.cupom {
+    margin-top: 3px;
+    margin-left: 2px;
+}
